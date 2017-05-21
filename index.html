@@ -36,7 +36,7 @@ gh.getUser("iwotastic").listRepos(function(err, repos) {
   repos.forEach(function(r){
     var card = document.createElement("div")
     card.className = "card"
-    card.innerHTML = "<div class=\"card-content\"><span class=\"card-title\">" + r.name + "</span><p>" + r.description + "</p></div>"
+    card.innerHTML = "<div class=\"card-content\"><span class=\"card-title\"><a href=\"https://github.com/iwotastic/" + r.name + "\">" + r.name + "</a></span><p>" + r.description + "</p></div>"
     document.querySelector(".container").appendChild(card)
   })
 })
