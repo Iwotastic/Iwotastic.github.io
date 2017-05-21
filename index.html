@@ -31,8 +31,8 @@
 </div>
 </main>
 <script>
-var gh = new GitHub();
-gh.getUser("iwotastic").listRepos(function(err, repos) {
+var gh = new GitHub({username: "iwotastic", token: "1172420652237dc973056061a110f0b89d445d0b"});
+gh.getUser().listRepos(function(err, repos) {
   repos.forEach(function(r){
     var card = document.createElement("div")
     card.className = "card"
